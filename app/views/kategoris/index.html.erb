@@ -1,0 +1,23 @@
+<h1>Kategori</h1>
+
+<table class="table css-serial table-striped">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th colspan="3">Pilihan</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kategoris.each do |kategori| %>
+      <tr>
+        <td></td>
+        <td><%= kategori.nama %></td>
+        <td><%= link_to '', kategori, :class=> "glyphicon glyphicon-eye-open" %> | <%= link_to '', edit_kategori_path(kategori), :class=> "glyphicon glyphicon-edit" %> | <%= link_to '', kategori, :class=> "glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Hapus Data Ini?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Tambah Kategori', new_kategori_path, class: "btn btn-primary" %>

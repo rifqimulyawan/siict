@@ -1,0 +1,37 @@
+<p>
+  <strong>Merk:</strong>
+  <%= @barang.merk.nama %>
+</p>
+
+<p>
+  <strong>Nama:</strong>
+  <%= @barang.nama %>
+</p>
+
+<p>
+  <strong>Baik:</strong>
+  <%= @barang.baik %>
+</p>
+
+<p>
+  <strong>Rusak:</strong>
+  <%= @barang.rusak %>
+</p>
+
+<p>
+  <strong>Masuk:</strong>
+  <%= @barang.masuk %>
+</p>
+
+<p>
+  <strong>Gambar:</strong>
+  <%= @barang.gambar %>
+</p>
+
+<p>
+  <strong>Keterangan:</strong>
+  <%= @barang.keterangan %>
+</p>
+
+<%= link_to 'Edit', edit_barang_path(@barang) %> |
+<%= link_to 'Kembali', barangs_path %>

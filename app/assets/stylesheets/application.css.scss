@@ -1,0 +1,172 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Universal */
+$gray-medium-light: #eaeaea;
+
+/* bootstrap override */
+.navbar-default {
+  background-color: #337AB7;
+  border-color: #337ab7;
+}
+
+.navbar-brand {
+	font-weight: bolder;
+}
+
+body {
+    font-size: 12px;
+}
+
+.table > thead > tr > th {
+  vertical-align: inherit;
+  border-color: 1px solid #777777;
+  border-bottom: 1px solid #777777;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f5f5f5;
+}
+
+th, tr, td {
+  border : 1px solid #777777;
+}
+
+fieldset {
+  width: 30%;
+}
+
+/* forms */
+.authform {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.authform form {
+  @extend .well;
+  @extend .well-lg;
+  padding-bottom: 40px;
+}
+.authform .right {
+  float: right !important;
+}
+.authform .button {
+  @extend .btn;
+  @extend .btn-primary;
+}
+.authform fieldset {
+  @extend .well;
+}
+#error_explanation:not(:empty) {
+  @extend .alert;
+  @extend .alert-danger;
+}
+.alert {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#error_explanation h2 {
+  font-size: 16px;
+}
+.button-xs {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-xs;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+}
+
+.css-serial {
+  counter-reset: serial-number;  /* Set the serial number counter to 0 */
+}
+
+.css-serial td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);  /* Display the counter */
+}
+
+table thead tr th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+table tbody tr th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+table tfoot tr th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1em;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: normal;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+  margin: 0 3px;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  margin-top: 50px;
+  border-bottom: 1px solid #ccc;
+  color: $gray-darker;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+      text-decoration: none;
+    }
+  }
+  div {
+    float: left;
+    margin-left: 5px;
+  }
+}

@@ -1,0 +1,63 @@
+<script language="javascript" type="text/javascript">
+  function printDiv(divID) {
+      //Get the HTML of div
+      var divElements = document.getElementById(divID).innerHTML;
+      //Get the HTML of whole page
+      var oldPage = document.body.innerHTML;
+
+      //Reset the page's HTML with div's HTML only
+      document.body.innerHTML = 
+        "<html><head><title></title></head><body>" + 
+        divElements + "</body>";
+
+      //Print Page
+      window.print();
+
+      //Restore orignal HTML
+      document.body.innerHTML = oldPage;
+  }
+</script>
+
+<div id="printablediv">
+<h1>Data Barang</h1>
+
+<table class="table css-serial table-striped">
+  <thead>
+    <tr>
+      <th rowspan="2">No</th>
+      <th rowspan="2">Nama</th>
+      <th colspan="2">Kondisi</th>
+      <th rowspan="2">Jumlah</th>
+      <th rowspan="2">Keterangan</th>
+    </tr>
+    <tr>
+      <th>Baik</th>
+      <th>Rusak</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barangs.each do |barang| %>
+      <tr>
+        <td></td>
+        <td><%= barang.nama %></td>
+        <td><%= barang.baik %></td>
+        <td><%= barang.rusak %></td>
+        <td><%= barang.baik+barang.rusak %></td>
+        <td><%= barang.keterangan %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tfoot>
+      <tr>
+        <th colspan="2">Total</th>
+        <th><%= Barang.sum(:baik) %></th>
+        <th><%= Barang.sum(:rusak) %></th>
+        <th colspan="3"></th>
+      </tr>
+  </tfoot>
+</table>
+</div>
+
+<input type="button" value="Cetak Data" onclick="javascript:printDiv('printablediv')" class="btn btn-primary"/>
+<!-- Barang.count(:group => :kategori_id) -->

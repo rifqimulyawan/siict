@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kategori_id: 
+  nama: MyString
+
+two:
+  kategori_id: 
+  nama: MyString

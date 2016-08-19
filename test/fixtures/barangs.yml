@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  merk_id: 
+  nama: MyText
+  baik: 1
+  rusak: 1
+  masuk: 2016-08-14
+  gambar: MyString
+  keterangan: MyText
+
+two:
+  merk_id: 
+  nama: MyText
+  baik: 1
+  rusak: 1
+  masuk: 2016-08-14
+  gambar: MyString
+  keterangan: MyText

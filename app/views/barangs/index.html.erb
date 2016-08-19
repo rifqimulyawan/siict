@@ -1,0 +1,41 @@
+<h1>Barang</h1>
+
+<table class="table css-serial table-striped">
+  <thead>
+    <tr>
+      <th rowspan="2">No</th>
+      <th rowspan="2">kategori</th>
+      <th rowspan="2">Merk</th>
+      <th rowspan="2">Nama</th>
+      <th colspan="2">Jumlah</th>
+      <th rowspan="2">Masuk</th>
+      <th rowspan="2">Gambar</th>
+      <th rowspan="2">Keterangan</th>
+      <th rowspan="2">Pilihan</th>
+    </tr>
+    <tr>
+      <th>Baik</th>
+      <th>Rusak</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barangs.each do |barang| %>
+      <tr>
+        <td></td>
+        <td><%= link_to barang.nama, barang %></td>
+        <td><%= barang.merk.nama %></td>
+        <td><%= barang.nama %></td>
+        <td><%= barang.baik %></td>
+        <td><%= barang.rusak %></td>
+        <td><%= barang.masuk %></td>
+        <td><%= barang.gambar %></td>
+        <td><%= barang.keterangan %></td>
+        <td><%= link_to '', edit_barang_path(barang), :class=> "glyphicon glyphicon-edit" %> | <%= link_to '', barang, :class=> "glyphicon glyphicon-trash", method: :delete, data: { confirm: 'Hapus Data Ini?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Tambah Barang', new_barang_path, class: "btn btn-primary" %>
+

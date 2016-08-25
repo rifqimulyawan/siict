@@ -35,7 +35,7 @@ gem 'mini_magick'
 gem 'carrierwave', '~> 0.10.0'
 # It is also recommended to use Autoprefixer with Bootstrap to add browser vendor prefixes automatically
 gem 'autoprefixer-rails'
-
+# Bootstraps-sass
 gem 'bootstrap-sass'
 
 group :development, :test do
